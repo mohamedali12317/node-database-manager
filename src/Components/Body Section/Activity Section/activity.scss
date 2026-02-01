@@ -1,0 +1,127 @@
+
+/* colors and styles  */
+
+:root {
+ --primary-color: hsl(94 , 59% , 35%);
+ --hoverColor: #bdf094;
+ --paleGreen: hsl(96 , 75% , 89%);
+ --whiteColor : hsl(0 , 0% , 100%) ;
+ --blackColor : hsl(0 , 0% , 18%);
+ --textColor : hsl(240 , 1% , 48%);
+ --bgColor : hsl(220 , 10%  , 94%) ;
+ --greyText : rgb(190 , 190 , 190);
+ --inputColor : hsl(330 , 12% , 97%);
+ --itemCardColor :  hsl(120 , 5% , 88%);
+ --itemCardHover : hsl(120 , 27% , 87%);
+
+ /* font  */
+
+ --biggestFontSize : 2.5rem;
+ --h1FontSize : 1.5rem;
+ --h2FontSize : 1.25rem;
+ --h3FontSize : 1rem;
+ --normalFontSize : .938rem;
+ --smallFontSize : .813rem;
+ --smallestFontSize : .75rem;
+};
+
+
+.activitySection{
+ flex-basis: 50%;
+
+   .heading{
+    width: 100%;
+    justify-content: space-between;
+
+      h1{
+       font-size: var(--h2FontSize);
+       font-weight: 700;
+       color: var(--blackColor);
+      } //h1
+
+      .btn {
+        border: 1px solid transparent;
+
+         &:hover {
+          border: 1px solid var(--primary-color);
+         }
+      } // btn
+
+   } // heading
+
+   .secContainer {
+     margin-top: 1rem;
+
+       .sigleCustomer {
+         align-items: flex-start;
+         justify-content: space-between;
+
+           img {
+             width: 40px;
+             height: 40px;
+             object-fit: cover;
+             box-shadow: 0 2px 4px var(--itemCardColor);
+             border-radius: 50%;
+             -webkit-border-radius: 50%;
+             -moz-border-radius: 50%;
+             -ms-border-radius: 50%;
+             -o-border-radius: 50%;
+             margin-right: 1rem;
+} // img
+
+       .customerDetails {
+         flex: 1;
+
+           .name {
+             font-size: var(--h3FontSize);
+             font-weight: 600;
+             color: var(--blackColor);
+             display: block;
+           } // name
+
+           small {
+            font-weight: 500;
+            color: var(--textColor);
+            font-size: var(smallFontSize);
+           } // small
+
+       } // customerDetails
+
+       .duration {
+        color: var(--textColor);
+        font-weight: 500;
+        font-size: var(--smallFontSize);
+       }
+
+       } // .sigleCustomer
+
+   } // secContainer
+
+} // activitySection
+
+
+// media queries 
+
+@media (max-width: 1009px) {
+  .activitySection .secContainer .sigleCustomer .customerDetails .name {
+    font-size: var(--normalFontSize)
+  }
+} // 1008
+
+@media (max-width: 918px) {
+  .activitySection {
+    width: 100%;
+  } // .activitySection
+} // 1015
+
+@media (max-width: 395px) {
+  .activitySection .secContainer .sigleCustomer .customerDetails .name {
+    font-size: var(--smallestFontSize)
+  }
+} // 395
+
+@media (max-width: 368px) {
+  .activitySection .secContainer {
+    width: 113%;
+  }
+} // 395
